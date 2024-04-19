@@ -6,17 +6,17 @@
 ### 2. 로직 개발 사유
 : 광고 매체 마다 운영 시간이 달라 DB에 **운영 정보를 수동으로 추가**해야 하는 번거로움이 있었음. 이러한 번거로움을 해결하기 위해 장소별 운영 여부를 알려주는 자동화 로직이 필요했고 해당 기능을 개발하기로 결정
 ### 3. 로직 및 처리 방법 설명
-1. levenshtein_distance(str1, str2)
+**1. levenshtein_distance(str1, str2)**
   * 두 문자열의 레벤슈타인 거리(문자열의 유사도 검사)를 구하는 함수
-2. similarity_score(str1, str2)
+**2. similarity_score(str1, str2)**
   * 두 문자열의 유사성 점수 계산하는 함수, 유사성 점수는 0 ~ 1
   * 두 문자열 비교시 공백 제거하고 비교
   * 유사성 점수가 0.3 미만이라면 media값과 검색결과값이 완전히 다른 곳이라 판단
-3. check_network(media)
+**3. check_network(media)**
  * 네트워크 확인 함수
  * Selenium 사용하여 Chrome 브라우저를 **headless 모드**로 실행
     * GUI 없이 브라우저 실행 가능 -> 기존에 약 10초 걸리던 작업이 3초 이내로 줄어듦
-4. extract_media_info(media) : 네이버 지도에서 특정 매체(장소)에 대한 운영 여부를 추출하는 함수
+**4. extract_media_info(media) : 네이버 지도에서 특정 매체(장소)에 대한 운영 여부를 추출하는 함수**
   * **time_inf, time_inf2**는 진료 여부, 진료 종료 및 휴게 시간을 알려주는 변수
   * 검색 결과, 장소가 한 군데 : **entryIframe**으로 전환 후 운영 정보 반환
   * 검색 결과, 장소가 여러 군데 : **searchIframe**으로 전환 후 운영 정보 반환
