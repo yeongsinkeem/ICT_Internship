@@ -13,8 +13,8 @@
   * 두 문자열 비교시 공백 제거하고 비교
   * 유사성 점수가 0.3 미만이라면 media값과 검색결과값이 완전히 다른 곳이라 판단
 **3. check_network(media)**
- * 네트워크 확인 함수
- * Selenium 사용하여 Chrome 브라우저를 **headless 모드**로 실행
+  * 네트워크 확인 함수
+  * Selenium 사용하여 Chrome 브라우저를 **headless 모드**로 실행
     * GUI 없이 브라우저 실행 가능 -> 기존에 약 10초 걸리던 작업이 3초 이내로 줄어듦
 **4. extract_media_info(media) : 네이버 지도에서 특정 매체(장소)에 대한 운영 여부를 추출하는 함수**
   * **time_inf, time_inf2**는 진료 여부, 진료 종료 및 휴게 시간을 알려주는 변수
